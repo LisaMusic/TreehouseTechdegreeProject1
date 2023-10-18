@@ -6,7 +6,9 @@ Project 1 - A Number Guessing Game
 
 # Import the random and statistics modules.
 import random
-import statistics
+from statistics import mean
+from statistics import median
+from statistics import mode
 
 # Create the start_game function.
 def start_game ():
@@ -31,6 +33,7 @@ def start_game ():
 #   4. Once the guess is correct, stop looping, inform the user they "Got it" and store the number of guesses it took in a list.
             else:
                 print ("Congrats, you guessed it!")
+                break
         except ValueError:
             print("Please enter a number.")
             
@@ -40,8 +43,11 @@ def start_game ():
 #     c. The median of the saved attempts list
 #     d. The mode of the saved attempts list
 #   6. Prompt the player to play again
+    play_again = input ("Do you want to play again? Y/N")
 #     a. If they decide to play again, start the game loop over.
 #     b. If they decide to quit, show them a goodbye message.
-
+    if play_again.lower() != "y":
+        print ("OK. Bye!")
 # ( You can add more features/enhancements if you'd like to. )
 # Kick off the program by calling the start_game function.
+start_game()
