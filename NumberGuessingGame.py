@@ -24,7 +24,7 @@ def start_game ():
                     attempts.append(guess_attempts)
                     break
             except ValueError:
-                print("Please enter a number.")
+                print("Please enter a number between 1 and 100.")
 
         print ("You needed {} attempts.".format (guess_attempts))
         print ("Mean: {}".format (mean(attempts)))
