@@ -37,4 +37,5 @@ def start_game ():
             print ("Here we go. Let's see if you can beat your score:{}".format(min(attempts)))
         else:
             print ("OK. Bye!")
+
 start_game()
